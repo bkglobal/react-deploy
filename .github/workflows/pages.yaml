@@ -14,7 +14,7 @@ jobs:
     name: Build
     # name of the job
     runs-on: ubuntu-latest
-
+    environment: Production
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
@@ -37,7 +37,7 @@ jobs:
     # name of the job
     runs-on: ubuntu-latest
     needs: build
-
+    environment: Production
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v2
